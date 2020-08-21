@@ -1,0 +1,138 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI regular';
+  background-color:  #f8f3ed;
+  /* background-color: #004523; */
+  /* background: #049F4A; */
+}
+
+.row_header img{
+    width: 220px;
+}
+
+.row_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+ h1{
+    /* width: 70%; */
+    color: #049F4A;
+   padding-bottom: 1.5%;
+   margin-left: 20px;
+    font-size: 3em;
+    font-weight: 600
+}
+
+/* ==============the left accordion============= */
+.left_accordion_FAQ{
+    width: 45%;
+    /* background: rgb(255, 255, 255); */
+    height: 100vh;
+    margin-left: 5%;
+}
+/* the search section */
+h2{
+    text-align: center;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-transform: initial;
+    color: #049F4A;
+}
+form{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 9vh;
+    position: relative;
+    margin-top: -10px;
+}
+.search_icon i{
+    font-size: 30px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    color: gray;
+    padding: 2% 3%;
+    cursor: pointer;
+}
+
+input[type=text]{
+  font-size: 17px;
+  border: none;
+  text-indent: 12%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 3px 30px -22px rgba(0,0,0,1);
+  outline: none;
+}
+/* popular questions */
+.pop_questons {
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 5px 0;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: .8em;
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(32, 32, 32);
+}
+
+.accordion {
+    /* height: 414px; */
+    overflow: auto;
+    width: 90%;
+    padding: 0 5px;
+    border: 2px solid #049F4A;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+}
+.panel{
+    width: 75%;
+    margin: 0 auto;
+    border-left: 1.5px solid #049F4A;
+    padding-left: 4%;
+    padding-right: 7%;
+    overflow: hidden;
+    font-size: 14px;
+    max-height: 0;
+}
+h3{
+    color: #004523;
+}
+
+.accordion .icon{
+ margin: 0 10px 0 0;
+ width: 30px;
+ height: 30px;
+ background: url("../images/plus.png") no-repeat 8px 7px ;
+ background-color: #004523;
+ border-radius: 50%;
+ cursor: pointer;
+ transition: all .5s ease-in;
+}
+
+.icon img{
+    width: 80%;
+    margin: 10% 10%;
+}
+
+.accordion h5{
+    font-size: 18px;
+    margin:0;
+    padding: 10px 0 10px 0;
+    color: #004523;
+}
+.active .icon{
+    background: url("../images/minus.png") no-repeat 8px -25px #fff;
+}
