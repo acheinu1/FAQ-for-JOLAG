@@ -1,15 +1,26 @@
-let accordio = document.getElementsByClassName("accordion");
-let i;
-let lenght = accordio.length;
-for (i = 0; i< lenght; i++){
-    accordio[i].addEventListener("click", function()
-    {this.classList.toggle("active");
-      let panel= this.nextElementSibling;
-      if (panel.style.maxHeight){
-          panel.style.maxHeight = null;
-      }
-      else{
-          panel.style.maxHeight = panel.scrollHeight + "px"
-      }
-    })
-}
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
+});

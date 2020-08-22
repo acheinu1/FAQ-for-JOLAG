@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
                 <h1>Jolag Customer Care</h1>
             </div>
         </div>
+    <div class="left_right">
         <!-- ==============the left box with accordion ============== -->
         <div class="left_accordion_FAQ">
             <div class="searchbox_&header">
@@ -28,32 +30,174 @@
                     <input type="text" placeholder="Describe your issue" name="search">
                 </form>     
             </div>
-            <div class="pop_questons"><p>Popular Questions</p></div>
-            <div class="accordion">
-                    <div class="icon"> <i class="fab fa-plus"></i></div>
-                    <h5>My package is prepaid. Do I need to show any docum... </h5>
-            </div >
-            <div class="panel">
-                    <h3>My package is prepaid. Do I need to show any document when collecting it?.</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda voluptas nihil
-                         dolorum facere dignissimos aspernatur non porro ut, cum pariatur consectetur numquam
-                    </p>
-            </div>
 
-            <div class="accordion">
-                <div class="icon"></div>
-                <h5>Lorem ipsum dolor sit. </h5>
-            </div >
-            <div class="panel">
-                <h3>Lorem, ipsum dolor.</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda voluptas nihil
-                     dolorum facere dignissimos aspernatur non porro ut, cum pariatur consectetur numquam
-                </p>
-            </div>
+            <div class="pop_questons"><p>Popular Questions</p></div>
+            
+            <!-- ===================================accordion================ -->
+            <div class="container">
+            <ul id="accordion" class="accordion">
+                <!-- =================qstn1-================================= -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- =================qstn2=================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ====================qstn3=================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li> 
+                
+                <!-- =======================qstn4=================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- ====================qstn5========================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ===========================qstn6======================================= -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- =============================qstn7===================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ===============================qstn8==================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ===============================qstn9===================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ==============================qstn10======================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- =================================qstn11======================================= -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ==================================qstn12====================================== -->
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Lorem, ipsum dolor.<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><h3>Lorem, ipsum dolor.</h3></li>
+                        <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laudantium aut fuga
+                             natus molestias, neque obcaecati assumenda cum. Aliquam voluptatum aliquid
+                              perferendis, sint excepturi doloribus facere aut nisi neque inventore?</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+          </div> 
+
+          
+          
 
         </div>
+
+
+        
         <!-- =============the right box with  product categories======== -->
-        <div class="right_product_category"></div>
+        <div class="right_product_category">
+            <div class="wrapper">
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Popular questions</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Products and prices</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Order payment</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Pay on delivery unavailable</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Returns and refunds</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Delivery</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>Account Login</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>8</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>9</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>10</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>11</h3></div>
+                <div class="item"><img src="assets/images/small logo.png" alt=""><h3>12</h3></div>
+            </div>
+        </div>
+    </div>
    </section >
 
    <script src="assets/js/app.js"></script>

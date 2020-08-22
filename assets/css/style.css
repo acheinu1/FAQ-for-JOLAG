@@ -1,4 +1,10 @@
-
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -30,7 +36,7 @@ body {
 /* ==============the left accordion============= */
 .left_accordion_FAQ{
     width: 45%;
-    /* background: rgb(255, 255, 255); */
+    /* background: #049F4A; */
     height: 100vh;
     margin-left: 5%;
 }
@@ -43,13 +49,14 @@ h2{
     line-height: 2.5rem;
     text-transform: initial;
     color: #049F4A;
+    padding: 5% 0;
 }
 form{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
-    height: 9vh;
+    height: 8vh;
     position: relative;
     margin-top: -10px;
 }
@@ -57,9 +64,9 @@ form{
     font-size: 30px;
     position: absolute;
     z-index: 2;
-    left: 0;
+    left: 21px;
     color: gray;
-    padding: 2% 3%;
+    padding: 2.2% 3%;
     cursor: pointer;
 }
 
@@ -67,10 +74,13 @@ input[type=text]{
   font-size: 17px;
   border: none;
   text-indent: 12%;
-  width: 100%;
+  width: 90%;
   border-radius: 5px;
   box-shadow: 2px 3px 30px -22px rgba(0,0,0,1);
   outline: none;
+    border: 1px solid #929da383;
+    background: #fff;
+
 }
 /* popular questions */
 .pop_questons {
@@ -78,61 +88,167 @@ input[type=text]{
     overflow: hidden;
     margin: 5px 0;
     text-overflow: ellipsis;
-    font-weight: 500;
-    font-size: .8em;
+    font-weight: 700;
+    font-size: .9em;
     margin-top: 20px;
     text-align: center;
     color: rgb(32, 32, 32);
 }
 
-.accordion {
-    /* height: 414px; */
-    overflow: auto;
-    width: 90%;
-    padding: 0 5px;
-    border: 2px solid #049F4A;
-    cursor: pointer;
-    border-radius: 10px;
-    display: flex;
-    margin: 5px 0;
-    align-items: center;
+/* =============the acordion--======== */
+ul {
+	list-style-type: none;
 }
-.panel{
-    width: 75%;
+
+a {
+	color: #b63b4d;
+	text-decoration: none;
+}
+
+.container{
+    width: 87%;
+    height: 409px;
+    /* background-color: grey; */
     margin: 0 auto;
-    border-left: 1.5px solid #049F4A;
-    padding-left: 4%;
-    padding-right: 7%;
-    overflow: hidden;
+    overflow: auto;
+    -webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+     border-radius: 4px;
+}
+ .accordion {
+ 	width:100%;
+ 	/* max-width: 360px; */
+ 	/* margin: 30px auto 20px; */
+ 	background: #FFF;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+     border-radius: 4px;
+     margin: 0 auto;
+     border: 1px solid #929da383;
+ }
+
+ .accordion .link {
+	cursor: pointer;
+	/* display: block; */
+	padding: 15px 15px 15px 42px;
+	color: #1d1f23af;
+	font-size: 15px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+/* the fontawesome icons */
+.accordion li i {
+	position: absolute;
+	top: 16px;
+	left: 18px;
+	font-size: 18px;
+	color: #1d1f23af;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+	right: 18px;
+	left: auto;
+	font-size: 16px;
+}
+/* ========================================================js */
+/* ========================================================js */
+.accordion li.open .link {
+	color:  #004523;
+}
+
+.accordion li.open i {
+    /* color: #049F4A; */
+    color:  #004523;
+}
+/* =======================================================js */
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.accordion li.default .submenu {display: block;}
+
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+    display: none;
+    background: #e4dfda;
     font-size: 14px;
-    max-height: 0;
-}
-h3{
-    color: #004523;
+    width: 100%;
+    /* margin: 0 auto; */
 }
 
-.accordion .icon{
- margin: 0 10px 0 0;
- width: 30px;
- height: 30px;
- background: url("../images/plus.png") no-repeat 8px 7px ;
- background-color: #004523;
- border-radius: 50%;
- cursor: pointer;
- transition: all .5s ease-in;
+.submenu li p {
+    border-bottom: 1px solid #4b4a5e;
+}
+.submenu h3{
+    padding: 2% 0%;
+}
+.submenu li{
+    padding:0.2% 5%;
 }
 
-.icon img{
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    background: #b63b4d;
+    color: #FFF;
+}
+
+/* ===================================the right box ============= */
+ /* ===================css grid==================== */
+ .left_right{
+     display: flex;
+     flex-direction: row;
+ }
+ .right_product_category{
+     margin-top: 2%;
+     width: 50%;
+     background-color: green;
+ }
+.wrapper{
     width: 80%;
-    margin: 10% 10%;
+    background-color: grey;
+    /* margin: 0 auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    grid-template-rows: 150px;
+    grid-auto-rows: 150px ;
 }
 
-.accordion h5{
-    font-size: 18px;
-    margin:0;
-    padding: 10px 0 10px 0;
-    color: #004523;
+.item{
+    background: hotpink;
+    padding: 10px;
 }
-.active .icon{
-    background: url("../images/minus.png") no-repeat 8px -25px #fff;
+.item:nth-child(even){
+    background-color: khaki;
+}
+.item img{
+    width: 90%;
+    height: 13vh;
 }
