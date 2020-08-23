@@ -24,7 +24,7 @@ body {
     align-items: center;
     margin-top: 5%;
 }
- h1{
+ .text_header h1{
     /* width: 70%; */
     color: #049F4A;
    padding-bottom: 1.5%;
@@ -41,7 +41,7 @@ body {
     margin-left: 5%;
 }
 /* the search section */
-h2{
+.searchbox_header h2{
     text-align: center;
     font-weight: 400;
     text-align: center;
@@ -228,27 +228,198 @@ a {
  .right_product_category{
      margin-top: 2%;
      width: 50%;
-     background-color: green;
+     /* background-color: green; */
+ }
+ .scroller{
+     background-color: none;
  }
 .wrapper{
     width: 80%;
-    background-color: grey;
+    background-color: #f8f3ed;
     /* margin: 0 auto; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2px;
-    grid-template-rows: 150px;
-    grid-auto-rows: 150px ;
+    grid-template-rows: 130px;
+    grid-auto-rows: 130px ;
+    border-bottom:#f8f3ed 2px solid;
 }
 
 .item{
-    background: hotpink;
+    background: #fff;
     padding: 10px;
 }
 .item:nth-child(even){
-    background-color: khaki;
+    background-color: #fff;
 }
-.item img{
-    width: 90%;
-    height: 13vh;
+
+.w_cols img{
+    width: 50%;
+    /* height: 2vh; */
+    margin-left: 25%;
+    margin-top: 10%;
 }
+.widercols{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 2px;
+    background-color: #f8f3ed;
+    grid-template-rows: 86px 86px;
+    /* grid-auto-rows: ; */
+}
+.w_cols{
+    background-color: #fff;
+}
+.w_cols:nth-child(even){
+    background-color: #fff;
+}
+/* ===============f awsome in css grid========== */
+.right_product_category .wrapper .item i{
+    font-size: 50px;
+    margin-left: 34px;
+    margin-top: 10px;
+    color: #049F4A;
+}
+
+.right_product_category .wrapper .item h3{
+    font-size: 14px;
+    text-align: center;
+    color: #1d1f23af;
+}
+
+
+/* +=======================================Media queries========================================== */
+
+/* ==========FOR PHONE SCREEN================== */
+@media screen and (max-width: 575px) {
+    body{
+      width: 100%;
+      }
+      .row_header{
+        flex-direction: column;
+      }
+      .text_header h1{
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .left_right{
+        flex-direction: column-reverse;
+      }
+      .searchbox_header h2{
+        text-align: center;
+        font-weight: 800;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        position: absolute;
+        top:7em;
+        color: #004523;
+        left: 20%;
+    }
+    .wrapper{
+        /* padding: 3% 2%; */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right_product_category{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 12%;
+        width: 100%;
+    }
+    .widercols{
+        width: 94%;
+        /* grid-template-columns: 1fr 1fr; */
+        grid-gap: 2px;
+        background-color: #f8f3ed;
+        grid-template-rows: 86px 86px;
+        margin: 0 3%;
+        
+    } 
+    .item{
+        flex: 0 0 auto;
+        width: 130px;
+    }
+    
+    .scroller{
+        width: 94%;
+        /* padding: 0 1%; */
+        margin: 1% auto;
+        overflow-x: auto;
+    }
+    .left_accordion_FAQ{
+        width: 100%;
+        margin: 0;
+    }
+    form{
+        
+        width: 97%;
+        margin: 0 auto;
+        height: 8vh;
+        margin-top: 7%;
+    }
+    .search_icon i{
+        font-size: 22px;
+        position: absolute;
+        z-index: 2;
+        left: 6%;
+        color: gray;
+        padding: 2.2% 3%;
+        cursor: pointer;
+        top: 23%;
+    }
+    input[type=text]{  
+        text-indent: 15%;
+      
+      }
+      .w_cols img{
+        width: 65%;
+        /* height: 2vh; */
+        margin-left: 15%;
+        margin-top: 15%;
+    }
+
+   
+}
+
+/* ====================FOR TABLET================= */
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+  body{
+    width: 100%;
+    }
+
+    form{
+    width: 87%;
+    margin: 0 auto;
+    height: 5vh;
+    /* margin-top: 2%; */
+    }
+    .search_icon i{
+        font-size: 22px;
+        position: absolute;
+        z-index: 2;
+        left: 6%;
+        color: gray;
+        padding: 2.2% 3%;
+        cursor: pointer;
+        top: 23%;
+    }
+    .left_right{
+        width: 92%;
+    }
+    .widercols{
+        width: 100%;
+        /* grid-template-columns: 1fr 1fr; */
+        background-color: #f8f3ed;
+        grid-template-rows: 86px 86px;
+        
+    } 
+    .right_product_category{
+        width: 50%;
+    }
+  
+  }
